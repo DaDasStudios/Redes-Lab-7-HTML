@@ -1,0 +1,173 @@
+/* Victoria: estilo editorial, papel crema, tipografía serif y acento vino tinto */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: #2b2420;
+  background: #faf6ef;
+}
+
+a { color: #7a1f2b; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 16px;
+  border-bottom: 1px solid #e4d9c6;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.menu a {
+  color: #5c4f45;
+  text-decoration: none;
+}
+
+.menu a:hover { color: #7a1f2b; }
+
+.encabezado {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 20px 32px;
+  text-align: center;
+  border-bottom: 3px double #7a1f2b;
+}
+
+.seccion {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #7a1f2b;
+}
+
+.encabezado h1 {
+  margin: 12px 0 8px;
+  font-size: clamp(2rem, 6vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.subtitulo {
+  margin: 0;
+  font-style: italic;
+  color: #5c4f45;
+}
+
+.columna {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.perfil {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 40px 0;
+  padding: 24px;
+  border: 1px solid #e4d9c6;
+  background: #fffdf8;
+}
+
+.perfil h2 { margin: 0 0 8px; }
+
+.pendiente {
+  color: #8a7b6e;
+  font-style: italic;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: #3a2e28;
+}
+
+.entrada::first-letter {
+  float: left;
+  margin: 6px 10px 0 0;
+  font-size: 3.6rem;
+  line-height: .8;
+  color: #7a1f2b;
+}
+
+.relato h3 {
+  margin: 40px 0 6px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3a2e28;
+}
+
+.relato h3 span {
+  margin-right: 8px;
+  color: #7a1f2b;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.nota {
+  margin: 20px 0;
+  padding: 16px 22px;
+  border-left: 4px solid #7a1f2b;
+  background: #f3e9da;
+}
+
+.nota-titulo {
+  margin: 0 0 6px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #7a1f2b;
+}
+
+.nota ul {
+  columns: 2;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.cadena { padding-left: 24px; }
+.cadena li::marker { color: #7a1f2b; font-style: italic; }
+
+code {
+  font-family: Consolas, Menlo, monospace;
+  font-size: .9em;
+  background: #f3e9da;
+  padding: 1px 5px;
+}
+
+figure { margin: 36px 0; }
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: .9rem;
+  font-style: italic;
+  color: #5c4f45;
+}
+
+.pie {
+  margin-top: 48px;
+  padding: 24px 16px 48px;
+  border-top: 1px solid #e4d9c6;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .perfil { flex-direction: column; align-items: center; text-align: center; }
+  .nota ul { columns: 1; }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="t d">
+  <title id="t">Encapsulamiento</title>
+  <desc id="d">Cada capa agrega su encabezado a los datos: datos, segmento, paquete, trama y finalmente bits.</desc>
+  <rect width="640" height="300" rx="16" fill="#0b1a2b"/>
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <!-- Datos -->
+    <text x="20" y="44" fill="#e0f2fe" text-anchor="start" font-weight="400">Capas 7–5</text>
+    <rect x="390" y="24" width="150" height="32" rx="6" fill="#f59e0b"/>
+    <text x="465" y="45" fill="#1f1300">DATOS</text>
+    <text x="620" y="45" fill="#7dd3fc" text-anchor="end" font-weight="400">datos</text>
+    <!-- Segmento -->
+    <text x="20" y="98" fill="#e0f2fe" text-anchor="start" font-weight="400">Capa 4</text>
+    <rect x="320" y="78" width="66" height="32" rx="6" fill="#a855f7"/>
+    <text x="353" y="99" fill="#fff">TCP</text>
+    <rect x="390" y="78" width="150" height="32" rx="6" fill="#f59e0b"/>
+    <text x="465" y="99" fill="#1f1300">DATOS</text>
+    <text x="620" y="99" fill="#7dd3fc" text-anchor="end" font-weight="400">segmento</text>
+    <!-- Paquete -->
+    <text x="20" y="152" fill="#e0f2fe" text-anchor="start" font-weight="400">Capa 3</text>
+    <rect x="250" y="132" width="66" height="32" rx="6" fill="#3b82f6"/>
+    <text x="283" y="153" fill="#fff">IP</text>
+    <rect x="320" y="132" width="66" height="32" rx="6" fill="#a855f7"/>
+    <text x="353" y="153" fill="#fff">TCP</text>
+    <rect x="390" y="132" width="150" height="32" rx="6" fill="#f59e0b"/>
+    <text x="465" y="153" fill="#1f1300">DATOS</text>
+    <text x="620" y="153" fill="#7dd3fc" text-anchor="end" font-weight="400">paquete</text>
+    <!-- Trama -->
+    <text x="20" y="206" fill="#e0f2fe" text-anchor="start" font-weight="400">Capa 2</text>
+    <rect x="180" y="186" width="66" height="32" rx="6" fill="#06b6d4"/>
+    <text x="213" y="207" fill="#00161a">MAC</text>
+    <rect x="250" y="186" width="66" height="32" rx="6" fill="#3b82f6"/>
+    <text x="283" y="207" fill="#fff">IP</text>
+    <rect x="320" y="186" width="66" height="32" rx="6" fill="#a855f7"/>
+    <text x="353" y="207" fill="#fff">TCP</text>
+    <rect x="390" y="186" width="150" height="32" rx="6" fill="#f59e0b"/>
+    <text x="465" y="207" fill="#1f1300">DATOS</text>
+    <text x="620" y="207" fill="#7dd3fc" text-anchor="end" font-weight="400">trama</text>
+    <!-- Bits -->
+    <text x="20" y="260" fill="#e0f2fe" text-anchor="start" font-weight="400">Capa 1</text>
+    <rect x="180" y="240" width="360" height="32" rx="6" fill="#10b981"/>
+    <text x="360" y="261" fill="#00180f" font-family="Consolas, monospace">0110 1000 0111 0100 0111 0100 0111 0000</text>
+    <text x="620" y="261" fill="#7dd3fc" text-anchor="end" font-weight="400">bits</text>
+  </g>
+</svg>

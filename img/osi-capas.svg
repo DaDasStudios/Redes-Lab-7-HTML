@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 418" role="img" aria-labelledby="t d">
+  <title id="t">Modelo OSI y su relación con TCP/IP</title>
+  <desc id="d">Las siete capas del modelo OSI apiladas, con su equivalencia en las cuatro capas de TCP/IP.</desc>
+  <rect width="640" height="418" rx="16" fill="#0b1a2b"/>
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">
+    <g>
+      <rect x="20" y="20" width="420" height="46" rx="8" fill="#f59e0b"/>
+      <text x="36" y="49" fill="#1f1300" font-weight="700">7 · Aplicación</text>
+      <text x="426" y="49" fill="#1f1300" text-anchor="end">HTTP · DNS · DHCP · SSH</text>
+    </g>
+    <g>
+      <rect x="20" y="74" width="420" height="46" rx="8" fill="#f97316"/>
+      <text x="36" y="103" fill="#1f0a00" font-weight="700">6 · Presentación</text>
+      <text x="426" y="103" fill="#1f0a00" text-anchor="end">UTF-8 · TLS · JPEG</text>
+    </g>
+    <g>
+      <rect x="20" y="128" width="420" height="46" rx="8" fill="#ef4444"/>
+      <text x="36" y="157" fill="#fff" font-weight="700">5 · Sesión</text>
+      <text x="426" y="157" fill="#fff" text-anchor="end">abrir · mantener · cerrar</text>
+    </g>
+    <g>
+      <rect x="20" y="182" width="420" height="46" rx="8" fill="#a855f7"/>
+      <text x="36" y="211" fill="#fff" font-weight="700">4 · Transporte</text>
+      <text x="426" y="211" fill="#fff" text-anchor="end">TCP · UDP · puertos</text>
+    </g>
+    <g>
+      <rect x="20" y="236" width="420" height="46" rx="8" fill="#3b82f6"/>
+      <text x="36" y="265" fill="#fff" font-weight="700">3 · Red</text>
+      <text x="426" y="265" fill="#fff" text-anchor="end">IPv4 · IPv6 · OSPF · ICMP</text>
+    </g>
+    <g>
+      <rect x="20" y="290" width="420" height="46" rx="8" fill="#06b6d4"/>
+      <text x="36" y="319" fill="#00161a" font-weight="700">2 · Enlace de datos</text>
+      <text x="426" y="319" fill="#00161a" text-anchor="end">MAC · VLAN · 802.1Q</text>
+    </g>
+    <g>
+      <rect x="20" y="344" width="420" height="46" rx="8" fill="#10b981"/>
+      <text x="36" y="373" fill="#00180f" font-weight="700">1 · Física</text>
+      <text x="426" y="373" fill="#00180f" text-anchor="end">UTP · fibra · Wi-Fi</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#7dd3fc" stroke-width="2">
+    <path d="M458 22 h10 v150 h-10"/>
+    <path d="M458 184 h10 v42 h-10"/>
+    <path d="M458 238 h10 v42 h-10"/>
+    <path d="M458 292 h10 v96 h-10"/>
+  </g>
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#e0f2fe">
+    <text x="480" y="102">Aplicación</text>
+    <text x="480" y="210">Transporte</text>
+    <text x="480" y="264">Internet</text>
+    <text x="480" y="345">Acceso a red</text>
+    <text x="480" y="406" font-size="12" fill="#7dd3fc">TCP/IP</text>
+  </g>
+</svg>

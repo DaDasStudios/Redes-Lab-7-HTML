@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biografía de Jesús David Pérez Piñeres y su resumen del modelo OSI.">
+  <title>Jesús David Pérez Piñeres · Redes</title>
+  <link rel="stylesheet" href="../css/jesus.css">
+</head>
+<body>
+
+  <nav class="barra">
+    <a href="../index.html">~/inicio</a>
+    <a href="integrante2.html">victoria</a>
+    <a href="integrante3.html">linda</a>
+  </nav>
+
+  <header class="cabecera">
+    <img src="../img/jesus.svg" alt="Avatar de Jesús David Pérez Piñeres" width="140" height="140">
+    <div>
+      <p class="prompt">$ whoami</p>
+      <h1>Jesús David Pérez Piñeres</h1>
+      <p class="rol">Ingeniería Electrónica · Universidad de Ibagué</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="bio" class="panel">
+      <h2><span class="num">00</span> Sobre mí</h2>
+      <p>Estudio Ingeniería Electrónica en la Universidad de Ibagué y trabajo como desarrollador de integraciones en CORUS Consulting. Antes de eso construí aplicaciones web completas como independiente; la más grande fue Medexcel, una plataforma de exámenes para estudiantes de medicina.</p>
+      <p>En la universidad soy monitor académico en asignaturas de electrónica como RF, circuitos analógicos y teoría de circuitos, y recibí la beca al mejor promedio del programa durante dos semestres seguidos. Fuera de la ingeniería toco piano desde 2018.</p>
+      <ul class="enlaces">
+        <li><a href="https://dadastudios-portfolio.vercel.app" target="_blank" rel="noopener">Portafolio</a></li>
+        <li><a href="https://www.linkedin.com/in/jesusdavidperezpineros" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section id="resumen">
+      <h2 class="titulo-seccion"><span class="num">01</span> Resumen del curso: del cable a la aplicación</h2>
+      <p class="intro">Leo el modelo OSI de abajo hacia arriba, como se revisa un circuito: primero la señal y después lo que significa. Cada capa resuelve un problema y le entrega el resultado a la de arriba.</p>
+
+      <article class="capa">
+        <h3><span class="badge">L1</span> Física · la señal</h3>
+        <p>Convierte los bits en señales eléctricas, ópticas o de radio y las pone en el medio. No sabe nada de direcciones: solo transmite.</p>
+        <ul>
+          <li>Medios: cable UTP con conectores RJ-45, fibra óptica y Wi-Fi.</li>
+          <li>Equipos de esta capa: hubs y repetidores.</li>
+          <li>En el laboratorio: cable directo entre equipos distintos (PC–switch, router–switch) y cruzado entre equipos iguales (switch–switch, router–router).</li>
+        </ul>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L2</span> Enlace de datos · la trama local</h3>
+        <p>Agrupa los bits en tramas y las entrega dentro de la misma red local usando direcciones MAC. Con el CRC detecta si la trama llegó dañada.</p>
+        <ul>
+          <li>El switch aprende en su tabla MAC qué equipo está conectado en cada puerto.</li>
+          <li>VLAN para dividir un switch en varias redes lógicas.</li>
+          <li>Puertos <em>access</em> (una VLAN) y <em>trunk</em> 802.1Q (varias VLAN etiquetadas).</li>
+          <li>Subinterfaces del router con encapsulación dot1Q.</li>
+          <li>ARP traduce una IP a su MAC; mientras resuelve, el primer ping puede fallar.</li>
+        </ul>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L3</span> Red · el paquete entre redes</h3>
+        <p>Da direcciones lógicas y decide por dónde va cada paquete para llegar a otra red. Su equipo es el router, y fue la capa en la que más tiempo pasamos.</p>
+        <ul>
+          <li>IPv4: máscaras, clases y notación CIDR.</li>
+          <li>Subnetting y VLSM para repartir direcciones sin desperdiciarlas.</li>
+          <li>Gateway por defecto como salida de cada red.</li>
+          <li>OSPF para que los routers aprendan las rutas por sí mismos.</li>
+          <li>ICMP, el protocolo que usa <code>ping</code>.</li>
+          <li>IPv6 también pertenece a esta capa.</li>
+        </ul>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L4</span> Transporte · extremo a extremo</h3>
+        <p>Comunica aplicaciones, no equipos. Cada aplicación se identifica con un número de puerto.</p>
+        <ul>
+          <li><strong>TCP:</strong> confiable y orientado a conexión. Usa el saludo de 3 vías, acuses de recibo, retransmisión y control de flujo. Lo usan la web, el correo y la transferencia de archivos.</li>
+          <li><strong>UDP:</strong> rápido, sin conexión y sin garantías. Lo usan DNS, VoIP, streaming y juegos.</li>
+          <li>Puertos: <code>80</code> HTTP, <code>443</code> HTTPS, <code>53</code> DNS, <code>22</code> SSH, <code>23</code> Telnet, <code>67/68</code> DHCP.</li>
+        </ul>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L5</span> Sesión · el diálogo</h3>
+        <p>Abre, mantiene y cierra el diálogo entre dos aplicaciones. Si una transferencia se corta, permite retomarla donde quedó.</p>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L6</span> Presentación · el formato</h3>
+        <p>Se asegura de que los dos extremos interpreten igual los datos: codificación (ASCII, UTF-8), compresión y cifrado. Ejemplos: TLS/SSL, JPEG y MP4. Esta misma página declara <code>&lt;meta charset="utf-8"&gt;</code> para que las tildes se vean bien.</p>
+      </article>
+
+      <article class="capa">
+        <h3><span class="badge">L7</span> Aplicación · el servicio</h3>
+        <p>Es la capa que ve el usuario: la interfaz con los servicios de red.</p>
+        <ul>
+          <li>HTTP/HTTPS para la web.</li>
+          <li>DNS para traducir nombres a direcciones IP.</li>
+          <li>DHCP para asignar IP automáticamente, en lugar de configurarlas a mano como en los laboratorios.</li>
+          <li>FTP para archivos; SMTP, POP3 e IMAP para correo.</li>
+          <li>SSH y Telnet para administrar equipos remotos.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="encapsulamiento" class="panel">
+      <h2><span class="num">02</span> Encapsulamiento</h2>
+      <p>Al enviar, cada capa agrega su encabezado a lo que le entrega la capa de arriba. Al recibir se hace lo contrario: cada capa lee su encabezado y lo retira.</p>
+      <img class="figura" src="../img/encapsulamiento.svg" alt="Diagrama de encapsulamiento: datos, segmento, paquete, trama y bits" width="640" height="300">
+      <table>
+        <thead>
+          <tr><th>Capa</th><th>Unidad de datos</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>7 a 5</td><td>Datos</td></tr>
+          <tr><td>4</td><td>Segmento (TCP) o datagrama (UDP)</td></tr>
+          <tr><td>3</td><td>Paquete</td></tr>
+          <tr><td>2</td><td>Trama</td></tr>
+          <tr><td>1</td><td>Bits</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="tcpip" class="panel">
+      <h2><span class="num">03</span> Equivalencia con TCP/IP</h2>
+      <p>Internet funciona con un modelo práctico de cuatro capas que agrupa las siete de OSI:</p>
+      <ul class="mapa">
+        <li><span>Acceso a red</span> capas 1 y 2</li>
+        <li><span>Internet</span> capa 3</li>
+        <li><span>Transporte</span> capa 4</li>
+        <li><span>Aplicación</span> capas 5 a 7</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p><a href="../index.html">← volver al inicio</a></p>
+  </footer>
+
+</body>
+</html>

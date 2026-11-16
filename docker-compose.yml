@@ -1,0 +1,7 @@
+services:
+  sitio:
+    build: .
+    image: sitio-capa7:latest
+    ports:
+      - "8001:80"
+    restart: unless-stopped

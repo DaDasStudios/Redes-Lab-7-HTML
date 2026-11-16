@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biografía de Linda Sofia Moreno Gonzalez y su resumen del modelo OSI en fichas.">
+  <title>Linda Sofia Moreno Gonzalez · Redes</title>
+  <link rel="stylesheet" href="../css/linda.css">
+</head>
+<body>
+
+  <nav class="pildoras">
+    <a href="../index.html">🏠 Inicio</a>
+    <a href="integrante1.html">Jesús</a>
+    <a href="integrante2.html">Victoria</a>
+  </nav>
+
+  <header class="hola">
+    <img src="../img/linda.svg" alt="Avatar de Linda Sofia Moreno Gonzalez" width="150" height="150">
+    <h1>Linda Sofia Moreno Gonzalez</h1>
+    <p>Integrante 3 · Mi resumen del curso en fichas</p>
+  </header>
+
+  <main>
+
+    <section class="tarjeta bio">
+      <h2>Un poco sobre mí</h2>
+      <!-- PENDIENTE: reemplazar este párrafo con la biografía de Linda -->
+      <p class="pendiente">[Biografía pendiente: aquí va una presentación breve de Linda: qué estudia, qué le interesa y algún dato personal.]</p>
+    </section>
+
+    <section>
+      <h2 class="titulo">Las 7 capas, una ficha cada una</h2>
+      <p class="guia">Para estudiar me sirvió responder tres preguntas por capa: <strong>¿qué hace?</strong>, <strong>¿con qué lo hace?</strong> y <strong>¿dónde lo vimos en clase?</strong></p>
+
+      <div class="fichas">
+
+        <article class="ficha c7">
+          <h3><span>7</span> Aplicación</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Es la puerta de entrada a los servicios que usamos todos los días.</dd>
+            <dt>¿Con qué?</dt>
+            <dd>HTTP/HTTPS, DNS (de nombres a IP), DHCP, FTP, SMTP/POP3/IMAP, SSH y Telnet.</dd>
+            <dt>En clase</dt>
+            <dd>DHCP es la forma automática de dar IP; en los laboratorios las pusimos a mano.</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c6">
+          <h3><span>6</span> Presentación</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Deja los datos en un formato que los dos extremos entienden igual.</dd>
+            <dt>¿Con qué?</dt>
+            <dd>Codificación (ASCII, UTF-8), compresión (JPEG, MP4) y cifrado (TLS/SSL).</dd>
+            <dt>Dato curioso</dt>
+            <dd>Si el navegador no sabe que el texto es UTF-8, «presentación» se ve como «presentaciÃ³n».</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c5">
+          <h3><span>5</span> Sesión</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Inicia, mantiene y cierra el diálogo entre dos aplicaciones.</dd>
+            <dt>Extra</dt>
+            <dd>Permite retomar una transferencia que se interrumpió.</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c4">
+          <h3><span>4</span> Transporte</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Lleva los datos de extremo a extremo entre aplicaciones, que se distinguen por puertos.</dd>
+            <dt>¿Con qué?</dt>
+            <dd><strong>TCP</strong>: confiable, con saludo de 3 vías, acuses, retransmisión y control de flujo (web, correo, archivos). <strong>UDP</strong>: rápido, sin conexión ni garantías (DNS, VoIP, streaming, juegos).</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c3">
+          <h3><span>3</span> Red</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Pone direcciones lógicas y enruta los paquetes entre redes distintas.</dd>
+            <dt>¿Con qué?</dt>
+            <dd>El router, IPv4, IPv6 e ICMP (el de <code>ping</code>).</dd>
+            <dt>En clase</dt>
+            <dd>¡La parte más larga! Máscaras, clases, CIDR, subnetting, VLSM, gateway y OSPF.</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c2">
+          <h3><span>2</span> Enlace de datos</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Entrega tramas dentro de la misma red local con direcciones MAC y detecta errores con CRC.</dd>
+            <dt>¿Con qué?</dt>
+            <dd>El switch y su tabla MAC; ARP para pasar de IP a MAC.</dd>
+            <dt>En clase</dt>
+            <dd>VLAN, puertos access, trunk 802.1Q y subinterfaces dot1Q. Ojo: el primer ping puede fallar mientras ARP resuelve.</dd>
+          </dl>
+        </article>
+
+        <article class="ficha c1">
+          <h3><span>1</span> Física</h3>
+          <dl>
+            <dt>¿Qué hace?</dt>
+            <dd>Transmite los bits como señales eléctricas, ópticas o de radio.</dd>
+            <dt>¿Con qué?</dt>
+            <dd>Cable UTP, fibra, Wi-Fi, conectores RJ-45, hubs y repetidores.</dd>
+            <dt>En clase</dt>
+            <dd>Cable directo entre equipos distintos (PC–switch, router–switch) y cruzado entre iguales (switch–switch, router–router).</dd>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Puertos que hay que saberse</h2>
+      <ul class="chips">
+        <li><b>80</b> HTTP</li>
+        <li><b>443</b> HTTPS</li>
+        <li><b>53</b> DNS</li>
+        <li><b>22</b> SSH</li>
+        <li><b>23</b> Telnet</li>
+        <li><b>67/68</b> DHCP</li>
+      </ul>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Encapsulamiento paso a paso</h2>
+      <p>Al enviar, cada capa le pone su encabezado al mensaje y le cambia el nombre:</p>
+      <ul class="flujo">
+        <li>Datos <small>capas 7–5</small></li>
+        <li>Segmento / datagrama <small>capa 4</small></li>
+        <li>Paquete <small>capa 3</small></li>
+        <li>Trama <small>capa 2</small></li>
+        <li>Bits <small>capa 1</small></li>
+      </ul>
+      <p>Al recibir pasa lo mismo pero al revés: cada capa lee su encabezado y lo quita.</p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>OSI frente a TCP/IP</h2>
+      <p>Internet usa un modelo más práctico de 4 capas. Así se agrupan:</p>
+      <table>
+        <thead>
+          <tr><th>TCP/IP</th><th>Capas OSI que agrupa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Aplicación</td><td>5 Sesión · 6 Presentación · 7 Aplicación</td></tr>
+          <tr><td>Transporte</td><td>4 Transporte</td></tr>
+          <tr><td>Internet</td><td>3 Red</td></tr>
+          <tr><td>Acceso a red</td><td>1 Física · 2 Enlace de datos</td></tr>
+        </tbody>
+      </table>
+      <p class="mas">¿Quieres ver el modelo completo en un diagrama? Está en la <a href="../index.html">portada del sitio</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Hecho con HTML ♡ · <a href="../index.html">Volver al inicio</a></p>
+  </footer>
+
+</body>
+</html>

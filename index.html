@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sitio del grupo para la actividad práctica de Capa 7: HTML, HTTP y despliegue con Docker.">
+  <title>Capa 7 en práctica · Redes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="portada">
+    <p class="etiqueta">Capa 7 · Aplicación</p>
+    <h1>Del cable a la aplicación</h1>
+    <p class="bajada">Sitio del grupo para la actividad práctica de <strong>INTERNET: Redes y Comunicaciones IP</strong>. Cada integrante resume lo aprendido en el curso y se presenta en su propia página.</p>
+  </header>
+
+  <main>
+
+    <section class="bloque">
+      <h2>Integrantes</h2>
+      <ul class="integrantes">
+        <li>
+          <a href="integrantes/integrante1.html">
+            <img src="img/jesus.svg" alt="Avatar de Jesús David Pérez Piñeres" width="96" height="96">
+            <span class="nombre">Jesús David Pérez Piñeres</span>
+            <span class="enfoque">El modelo OSI de abajo hacia arriba, como una hoja de datos.</span>
+          </a>
+        </li>
+        <li>
+          <a href="integrantes/integrante2.html">
+            <img src="img/victoria.svg" alt="Avatar de Victoria Alejandra Triana Buritica" width="96" height="96">
+            <span class="nombre">Victoria Alejandra Triana Buritica</span>
+            <span class="enfoque">El viaje de una página web a través de las siete capas.</span>
+          </a>
+        </li>
+        <li>
+          <a href="integrantes/integrante3.html">
+            <img src="img/linda.svg" alt="Avatar de Linda Sofia Moreno Gonzalez" width="96" height="96">
+            <span class="nombre">Linda Sofia Moreno Gonzalez</span>
+            <span class="enfoque">Una ficha por capa: qué hace, con qué y dónde la vimos.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bloque dos-columnas">
+      <div>
+        <h2>El curso en una imagen</h2>
+        <p>Durante el semestre recorrimos las siete capas del modelo OSI: desde el cableado y las señales de la capa física hasta los servicios que usa la gente en la capa de aplicación. La mayor parte del trabajo estuvo en la capa de red, con direccionamiento IPv4, subnetting, VLSM y enrutamiento con OSPF.</p>
+        <p>A la derecha de cada capa aparece su equivalente en TCP/IP, el modelo de cuatro capas que usa internet en la práctica.</p>
+      </div>
+      <img src="img/osi-capas.svg" alt="Las siete capas del modelo OSI con su equivalencia en TCP/IP" width="640" height="418">
+    </section>
+
+    <section class="bloque">
+      <h2>Qué pasa cuando abres este sitio</h2>
+      <p>Este sitio es solo HTML (más una hoja de estilos por página) servido por <strong>Nginx</strong> dentro de un contenedor <strong>Docker</strong>. Al escribir <code>http://localhost:8001</code> en el navegador ocurre esto:</p>
+      <ol class="pasos">
+        <li><strong>Capa 7:</strong> el navegador arma una petición <code>GET /index.html</code> de HTTP.</li>
+        <li><strong>Capa 4:</strong> se abre una conexión TCP con el saludo de 3 vías hacia el puerto 8001 del equipo.</li>
+        <li><strong>Docker</strong> redirige ese puerto al puerto 80 del contenedor, donde escucha Nginx.</li>
+        <li><strong>Nginx</strong> responde <code>200 OK</code> con el archivo y el encabezado <code>Content-Type: text/html</code>.</li>
+        <li><strong>Capa 6:</strong> el navegador interpreta el texto como UTF-8 (lo declara <code>&lt;meta charset="utf-8"&gt;</code>) y pide las imágenes y estilos con nuevas peticiones HTTP.</li>
+      </ol>
+      <p>Las instrucciones para levantar el contenedor están en el archivo <code>README.md</code> del repositorio.</p>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>INTERNET: Redes y Comunicaciones IP · Universidad de Ibagué · 2026</p>
+  </footer>
+
+</body>
+</html>

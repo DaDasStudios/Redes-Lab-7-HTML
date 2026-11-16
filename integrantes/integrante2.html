@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biografía de Victoria Alejandra Triana Buritica y su resumen del modelo OSI.">
+  <title>Victoria Alejandra Triana Buritica · Redes</title>
+  <link rel="stylesheet" href="../css/victoria.css">
+</head>
+<body>
+
+  <nav class="menu">
+    <a href="../index.html">Inicio</a>
+    <a href="integrante1.html">Jesús</a>
+    <a href="integrante3.html">Linda</a>
+  </nav>
+
+  <header class="encabezado">
+    <p class="seccion">Integrante 2 · Redes y Comunicaciones IP</p>
+    <h1>Victoria Alejandra Triana Buritica</h1>
+    <p class="subtitulo">El viaje de una página web a través de las siete capas</p>
+  </header>
+
+  <main class="columna">
+
+    <section class="perfil">
+      <img src="../img/victoria.svg" alt="Avatar de Victoria Alejandra Triana Buritica" width="120" height="120">
+      <div>
+        <h2>Sobre mí</h2>
+        <!-- PENDIENTE: reemplazar este párrafo con la biografía de Victoria -->
+        <p class="pendiente">[Biografía pendiente: aquí va una presentación breve de Victoria: qué estudia, qué le interesa y algún dato personal.]</p>
+      </div>
+    </section>
+
+    <section class="relato">
+      <h2>Lo que aprendimos, contado como un viaje</h2>
+      <p class="entrada">Cuando escribimos una dirección en el navegador, el mensaje baja por siete capas en nuestro equipo, viaja por la red y vuelve a subir en el servidor. Seguir ese recorrido es la mejor forma de repasar todo el curso.</p>
+
+      <h3><span>I.</span> Todo empieza en la aplicación</h3>
+      <p>El navegador habla <strong>HTTP</strong> o <strong>HTTPS</strong>. Antes de pedir la página necesita la IP del servidor, así que le pregunta al <strong>DNS</strong>, que traduce nombres a direcciones. Nuestro propio equipo consiguió su IP por <strong>DHCP</strong>, sin tener que escribirla a mano como hicimos en los laboratorios. En esta misma capa viven FTP para archivos, SMTP, POP3 e IMAP para el correo, y SSH y Telnet para administrar equipos a distancia.</p>
+
+      <h3><span>II.</span> Se acuerda el idioma</h3>
+      <p>La capa de presentación decide cómo se representan los datos para que el otro extremo los entienda igual: el texto se codifica en ASCII o UTF-8, las imágenes y los videos se comprimen (JPEG, MP4) y, si la página usa HTTPS, todo se cifra con TLS/SSL.</p>
+
+      <h3><span>III.</span> Se abre una conversación</h3>
+      <p>La capa de sesión establece el diálogo entre las dos aplicaciones, lo mantiene mientras dura y lo cierra al final. Si una descarga se interrumpe, gracias a ella puede retomarse donde quedó.</p>
+
+      <h3><span>IV.</span> Se elige cómo viajar</h3>
+      <p>En la capa de transporte los datos se vuelven <em>segmentos</em> TCP o <em>datagramas</em> UDP, marcados con un puerto de origen y uno de destino. La web usa <strong>TCP</strong>: primero el saludo de 3 vías, luego acuses de recibo, retransmisión de lo que se pierda y control de flujo. <strong>UDP</strong> no garantiza nada, pero es más rápido; por eso lo prefieren DNS, la voz sobre IP, el streaming y los juegos.</p>
+      <aside class="nota">
+        <p class="nota-titulo">Puertos que conviene recordar</p>
+        <ul>
+          <li>80 · HTTP</li>
+          <li>443 · HTTPS</li>
+          <li>53 · DNS</li>
+          <li>22 · SSH</li>
+          <li>23 · Telnet</li>
+          <li>67/68 · DHCP</li>
+        </ul>
+      </aside>
+
+      <h3><span>V.</span> Se busca el camino</h3>
+      <p>El segmento se convierte en <em>paquete</em> al recibir una IP de origen y otra de destino. Ahora es el <strong>router</strong> quien decide la ruta hacia la otra red. Esta fue la parte más larga del semestre: IPv4, máscaras, clases y CIDR; subnetting y VLSM; el gateway de cada red y OSPF, con el que los routers aprenden las rutas solos. Para comprobar que todo funciona usamos <code>ping</code>, que trabaja con ICMP. IPv6 también vive en esta capa.</p>
+
+      <h3><span>VI.</span> Se entrega dentro de la red local</h3>
+      <p>El paquete se guarda dentro de una <em>trama</em> con MAC de origen y de destino, más un CRC para detectar errores. Para conocer la MAC del siguiente equipo se usa ARP, y mientras llega la respuesta el primer ping a veces se pierde. El <strong>switch</strong> aprende en su tabla MAC dónde está cada equipo. Con VLAN, puertos access, enlaces trunk 802.1Q y subinterfaces dot1Q en el router separamos varias redes sobre el mismo switch.</p>
+
+      <h3><span>VII.</span> Se convierte en señal</h3>
+      <p>Al final la trama es una secuencia de bits que sale como electricidad por un cable UTP con RJ-45, como luz por la fibra o como ondas de radio por Wi-Fi. Aquí trabajan los hubs y los repetidores. La regla del laboratorio: cable directo entre equipos distintos (PC–switch, router–switch) y cruzado entre equipos iguales (switch–switch, router–router).</p>
+
+      <h3>Y en el servidor, todo al revés</h3>
+      <p>Lo que hicimos al bajar se llama <strong>encapsulamiento</strong>: cada capa le agregó su encabezado al mensaje. Al llegar, el servidor recorre las capas hacia arriba y cada una lee y retira su encabezado hasta que Nginx recibe la petición HTTP original.</p>
+      <ol class="cadena">
+        <li>Datos (capas 7 a 5)</li>
+        <li>Segmento TCP o datagrama UDP (capa 4)</li>
+        <li>Paquete (capa 3)</li>
+        <li>Trama (capa 2)</li>
+        <li>Bits (capa 1)</li>
+      </ol>
+
+      <figure>
+        <img src="../img/osi-capas.svg" alt="Las siete capas del modelo OSI agrupadas en las cuatro capas de TCP/IP" width="640" height="418">
+        <figcaption>El mismo viaje visto con el modelo TCP/IP, el que usa internet en la práctica: Acceso a red (capas 1 y 2), Internet (3), Transporte (4) y Aplicación (5 a 7).</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p><a href="../index.html">Volver a la portada</a></p>
+  </footer>
+
+</body>
+</html>

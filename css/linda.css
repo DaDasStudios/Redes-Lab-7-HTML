@@ -1,0 +1,242 @@
+/* Linda: estilo pastel, tarjetas redondeadas y un color por capa */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #3b2f5c;
+  background: linear-gradient(180deg, #f5f0ff 0%, #fff5fa 100%) fixed;
+}
+
+a { color: #7c3aed; }
+
+.pildoras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 16px 0;
+}
+
+.pildoras a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: #5b21b6;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, .12);
+}
+
+.pildoras a:hover { background: #ede9fe; }
+
+.hola {
+  padding: 36px 16px 20px;
+  text-align: center;
+}
+
+.hola img {
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, .25);
+}
+
+.hola h1 {
+  margin: 18px 0 4px;
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  color: #5b21b6;
+}
+
+.hola p {
+  margin: 0;
+  color: #8b7aa8;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.tarjeta {
+  margin: 24px 0;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(91, 33, 182, .08);
+}
+
+.tarjeta h2,
+.titulo {
+  margin-top: 0;
+  color: #5b21b6;
+}
+
+.titulo {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.guia {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.pendiente {
+  color: #a194b8;
+  font-style: italic;
+}
+
+.fichas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.ficha {
+  padding: 20px 22px;
+  border-radius: 20px;
+  background: var(--fondo);
+  border: 2px solid var(--borde);
+}
+
+.ficha h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  color: #3b2f5c;
+}
+
+.ficha h3 span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--borde);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.ficha dl { margin: 0; }
+
+.ficha dt {
+  margin-top: 8px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--borde);
+}
+
+.ficha dd {
+  margin: 2px 0 0;
+  font-size: .96rem;
+}
+
+.c7 { --fondo: #fff4e0; --borde: #e59400; }
+.c6 { --fondo: #ffe9e0; --borde: #e8663d; }
+.c5 { --fondo: #ffe4ec; --borde: #d6457a; }
+.c4 { --fondo: #f3e8ff; --borde: #9b5de5; }
+.c3 { --fondo: #e6efff; --borde: #4a7bd8; }
+.c2 { --fondo: #e0f7f8; --borde: #1b9aaa; }
+.c1 { --fondo: #e3f8ec; --borde: #2a9d64; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f3e8ff;
+}
+
+.chips b {
+  margin-right: 6px;
+  color: #7c3aed;
+}
+
+.flujo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flujo li {
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fbcfe8, #ddd6fe);
+  font-weight: 700;
+  text-align: center;
+}
+
+.flujo li + li::before {
+  content: "→";
+  margin-right: 8px;
+  color: #7c3aed;
+}
+
+.flujo small {
+  display: block;
+  font-weight: 400;
+  color: #6b5b8a;
+}
+
+code {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .7);
+  font-family: Consolas, Menlo, monospace;
+  font-size: .9em;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+
+th {
+  padding: 6px 14px;
+  text-align: left;
+  color: #8b7aa8;
+  font-size: .85rem;
+}
+
+td {
+  padding: 12px 14px;
+  background: #faf5ff;
+}
+
+td:first-child {
+  border-radius: 12px 0 0 12px;
+  font-weight: 700;
+  color: #5b21b6;
+}
+
+td:last-child { border-radius: 0 12px 12px 0; }
+
+.mas { margin-bottom: 0; }
+
+.pie {
+  padding: 24px 16px 48px;
+  text-align: center;
+  color: #8b7aa8;
+}
+
+@media (max-width: 600px) {
+  .tarjeta { padding: 22px 18px; }
+  .flujo li + li::before { content: none; }
+}
