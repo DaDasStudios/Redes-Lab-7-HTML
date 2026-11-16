@@ -83,11 +83,6 @@ main {
   text-align: center;
 }
 
-.pendiente {
-  color: #a194b8;
-  font-style: italic;
-}
-
 .fichas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
