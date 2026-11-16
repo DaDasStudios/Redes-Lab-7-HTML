@@ -49,8 +49,8 @@ No se necesita Docker Hub: la imagen se construye en la propia máquina.
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL-del-repositorio>
-cd <carpeta-del-repositorio>
+git clone https://github.com/DaDasStudios/Redes-Lab-7-HTML.git
+cd Redes-Lab-7-HTML
 ```
 
 ### 2a. Con Docker Compose (recomendado)
